@@ -29,7 +29,8 @@ twitter_username: theByted
 github_username:  byted
 
 # Build settings
-theme: jekyll-theme-midnight
+# theme: minima
+remote_theme: riggraz/no-style-please
 plugins:
   - jekyll-feed
 
