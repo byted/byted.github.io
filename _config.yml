@@ -18,21 +18,31 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Some Blog
-email: example@mailbox.org
+title: Some stuff about myself
+# email: example@mailbox.org
 description: >- # this means to ignore newlines until "baseurl:"
   Some blog description.
 baseurl: "" # the subpath of your site, e.g. /blog
 domain: byted.github.io
 url: "https://byted.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: theByted
-github_username:  byted
 
 # Build settings
 # theme: minima
 remote_theme: riggraz/no-style-please
+
+theme_config:
+  appearance: "auto" # can be "light", "dark" or "auto"
+  # back_home_text: ".." # customize text for homepage link in post layout
+  date_format: "%Y-%m-%d" # customize how date is formatted
+  # show_description: false # show blog description in home page
 plugins:
-  - jekyll-feed
+  # - jekyll-feed
+  - jekyll-archives
+
+jekyll-archives:
+  enabled:
+  - categories
+  - year
 
 # Exclude from processing.
 # The following items will not be processed, by default.
