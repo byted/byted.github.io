@@ -1,0 +1,19 @@
+# For documentation on this file, see:
+# https://github.com/riggraz/no-style-please#customize-the-menu
+
+entries:
+  - title: info
+    entries:
+      - title: Stefan Selent
+      # - title: Software Engineer @ SAP Labs in California
+      - title: github
+        url: https://github.com/byted
+      # - title: twitter
+      #   url: https://twitter.com/the_byted
+
+  - title: some astonishingly mediocre thoughts
+    post_list:
+      limit: 5
+      show_more: true
+      show_more_text: see all...
+      show_more_url: archive.html
