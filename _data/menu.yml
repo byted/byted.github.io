@@ -2,7 +2,7 @@
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
 entries:
-  - title: info
+  - title: myself
     entries:
       - title: Stefan Selent
       # - title: Software Engineer @ SAP Labs in California
@@ -11,9 +11,9 @@ entries:
       # - title: twitter
       #   url: https://twitter.com/the_byted
 
-  - title: some astonishingly mediocre thoughts
+  - title: thoughts
     post_list:
       limit: 5
       show_more: true
-      show_more_text: see all...
+      show_more_text: more...
       show_more_url: archive.html
