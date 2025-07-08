@@ -4,10 +4,12 @@
 entries:
   - title: myself
     entries:
-      - title: Stefan Selent
+      - title: Stefan Selent / byted
       # - title: Software Engineer @ SAP Labs in California
       - title: github
         url: https://github.com/byted
+      - title: linkedin
+        url: https://www.linkedin.com/in/stefanselent/
       # - title: twitter
       #   url: https://twitter.com/the_byted
 

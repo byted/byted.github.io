@@ -18,9 +18,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Some stuff about Stefan
+title: Scratchpad, blog & other stuff
 # email: example@mailbox.org
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   Some blog description.
 baseurl: "" # the subpath of your site, e.g. /blog
 domain: byted.github.io
@@ -33,20 +33,20 @@ defaults:
     values:
       layout: post-with-tags
 
-# Build settings
-# theme: minima
 remote_theme: riggraz/no-style-please
 
 theme_config:
   appearance: "auto" # can be "light", "dark" or "auto"
-  # back_home_text: ".." # customize text for homepage link in post layout
-  date_format: "%Y-%m-%d" # customize how date is formatted
-  # show_description: false # show blog description in home page
+  back_home_text: ".."
+  date_format: "%Y-%m-%d"
+  show_description: false
 plugins:
   # - jekyll-feed
   - jekyll-archives
 
 jekyll-archives:
+  layouts:
+    tag: tag-archive
   enabled:
   - categories
   - tags
