@@ -6,6 +6,23 @@ layout: post
   <head>
     <meta charset="UTF-8">
     <title>{{ page.title }}</title>
+    <style>
+      /* our style inverts the background by default for cdoe blocks
+      remove the background for mermaid */
+      .language-mermaid {
+        background: none !important;
+      }
+    </style>
+
+    <script type="module">
+      
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/+esm';
+      mermaid.initialize({ startOnLoad: true });
+      await mermaid.run({
+          querySelector: '.language-mermaid',
+      });
+    </script>
+
   </head>
   <body>
     {% if page.tags %}
