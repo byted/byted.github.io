@@ -1,6 +1,6 @@
 ---
 title: It Just Worked! Moving my Home-Lab ZFS RAID in 15 Minutes
-tags: zsf home-lab linux
+tags: zsf homelab linux
 ---
 
 Sometimes tech just works. And it’s worth calling out when it does. I recently set up a two-drive software RAID 1 on a really old machine. After some testing and playing around with random projects, I decided to upgrade to a machine that hadn't been sitting in my tech stash for over 10 years.
