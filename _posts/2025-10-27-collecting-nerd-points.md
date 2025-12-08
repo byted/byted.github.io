@@ -101,5 +101,6 @@ Note: if files are not showing up in Memories, try:
 docker exec -u www-data -it nextcloud-aio-nextcloud php occ memories:index -u <username>
 ```
 
+---
 
 [^1]: Why not [Immich](https://github.com/immich-app/immich)? Even though I really enjoy the name, I want to avoid hosting yet another tool and see how far I can get with Nextcloud.

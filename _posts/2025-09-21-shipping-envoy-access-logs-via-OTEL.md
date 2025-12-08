@@ -169,5 +169,6 @@ spec:
 > [!CAUTION]
 > The [library envoy uses](https://github.com/envoyproxy/envoy/issues/33603) to parse the claims interprets [dots as _nested_ claims](https://github.com/google/jwt_verify_lib/issues/104). The library was archived on July 16 2025. So don't hold your breath for this feature to land soon. Instead use Envoy's Lua or WASM scripting.
 
+---
 
 [^1]: OK, a bit of complaining: Using [Cursor](https://latest.stefan.fail/tag/cursor-ai/) for envoy/istio/otel related tasks turned out to be the perfect breeding ground for hallucinations. 

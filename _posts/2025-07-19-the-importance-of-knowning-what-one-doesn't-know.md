@@ -1,5 +1,5 @@
 ---
-tags:   github ai-coding cursor.ai
+tags:   github ai-coding cursor.ai ai
 ---
 <!-- {% raw %} -->
 Another day, another AI coding adventure. Today's scenario seemed perfect for the LLM gods: Tweak an existing GitHub Action. Loads of examples on the web, small & self-contained codebase. But it turned out to be surprisingly tricky.

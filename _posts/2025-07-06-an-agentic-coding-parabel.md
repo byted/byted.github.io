@@ -1,5 +1,5 @@
 ---
-tags:   temporal.io ai-coding cursor.ai
+tags:   temporal.io ai-coding cursor.ai ai
 ---
 I'm regularly testing out AI coding tools since I want to improve my workflow and be more productive - ok, maybe that's just code for not getting left behind by AIs fast-paced ~~PR~~ product improvements
 
