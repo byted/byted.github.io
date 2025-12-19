@@ -1,5 +1,5 @@
 ---
-tags: istio envoy datadog opentelemetry
+tags: istio envoy datadog opentelemetry networking
 ---
 Today is not about documenting the current shortcomings of [AI coding](https://latest.stefan.fail/tag/ai-coding/). Instead, I'm going to document that I'm just as capable as AI when it comes to making dumb mistakes[^1]
 
