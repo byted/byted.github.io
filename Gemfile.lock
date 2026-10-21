@@ -225,10 +225,6 @@ GEM
     minitest (5.26.1)
     net-http (0.7.0)
       uri
-    no-style-please (0.4.7)
-      jekyll (~> 3.9.0)
-      jekyll-feed (~> 0.15.1)
-      jekyll-seo-tag (~> 2.7.1)
     nokogiri (1.17.2-arm64-darwin)
       racc (~> 1.4)
     nokogiri (1.17.2-x86_64-darwin)
@@ -280,9 +276,6 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-archives
-  jekyll-feed
-  minima
-  no-style-please
   webrick
 
 BUNDLED WITH
