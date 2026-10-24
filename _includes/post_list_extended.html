@@ -7,14 +7,10 @@ https://github.com/riggraz/no-style-please/blob/master/_includes/post_list.html
   {%-assign posts = site.categories[include.category]-%}
 {%-elsif include.tag-%}
   {%-assign posts = site.tags[include.tag]-%}
+{%-elsif page.posts-%}
+  {%-assign posts = page.posts-%}
 {%-else-%}
   {%-assign posts = site.posts-%}
-{%-endif-%}
-
-{%-if include.tags-%}
-  {%-assign posts = site.tags[include.tag]-%}  
-{%-else-%}
-  {%-assign posts = page.posts-%}
 {%-endif-%}
 
 {%-if include.limit and posts.size > include.limit-%}

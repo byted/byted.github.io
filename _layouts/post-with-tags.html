@@ -1,57 +1,47 @@
 ---
 layout: post
 ---
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>{{ page.title }}</title>
-    <style>
-      /* our style inverts the background by default for cdoe blocks
-      remove the background for mermaid */
-      .language-mermaid {
-        background: none !important;
-      }
-      blockquote {
-        font-style: italic;
-        border: none;
-        border-bottom: thin solid #00000042;
-        border-left: thin solid #00000042;
-        padding: 1rem;
-        margin: 1em;
-      }
+<style>
+  /* our style inverts the background by default for code blocks
+  remove the background for mermaid */
+  .language-mermaid {
+    background: none !important;
+  }
+  blockquote {
+    font-style: italic;
+    border: none;
+    border-bottom: thin solid #00000042;
+    border-left: thin solid #00000042;
+    padding: 1rem;
+    margin: 1em;
+  }
 
-      del {
-        text-decoration-thickness: 0.08em;
-      }
+  del {
+    text-decoration-thickness: 0.08em;
+  }
 
-      body {
-        color: #404040;
-      }
-    </style>
+  body {
+    color: #404040;
+  }
+</style>
 
-    <script type="module">
-      
-      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/+esm';
-      mermaid.initialize({ startOnLoad: true });
-      await mermaid.run({
-          querySelector: '.language-mermaid',
-      });
-    </script>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/+esm';
+  mermaid.initialize({ startOnLoad: true });
+  await mermaid.run({
+      querySelector: '.language-mermaid',
+  });
+</script>
 
-  </head>
-  <body>
-    {% if page.tags %}
-      <div class="tags-meta" style="font-size: 0.9em; margin-bottom: 1em; color: #888;">
-        tags: 
-        {% for tag in page.tags %}
-          <a href="/tag/{{ tag | slugify }}/">{{ tag }}</a>{% unless forloop.last %} | {% endunless %}
-        {% endfor %}
-      </div>
-    {% endif %}
+{% if page.tags %}
+  <div class="tags-meta" style="font-size: 0.9em; margin-bottom: 1em; color: #888;">
+    tags: 
+    {% for tag in page.tags %}
+      <a href="/tag/{{ tag | slugify }}/">{{ tag }}</a>{% unless forloop.last %} | {% endunless %}
+    {% endfor %}
+  </div>
+{% endif %}
 
-    <div class="post-content">
-      {{ content }}
-    </div>
-  </body>
-</html>
+<div class="post-content">
+  {{ content }}
+</div>
