@@ -17,13 +17,13 @@
   <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | relative_url }}" />
   <link id="theme-css" rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
   <script>
-    // Hidden theme switch: open any page with ?theme=macchiato to try the
-    // alternative theme; the choice sticks in this browser until ?theme=ink.
+    // Hidden theme switch: open any page with ?t=m to try Macchiato;
+    // the choice sticks in this browser until ?t=i (Ink).
     (function () {
-      var themes = { ink: "main", macchiato: "macchiato" }, theme;
+      var themes = { ink: "main", macchiato: "macchiato" }, short = { i: "ink", m: "macchiato" }, theme;
       try {
-        var asked = new URLSearchParams(location.search).get("theme");
-        if (asked in themes) localStorage.setItem("theme", asked);
+        var asked = short[new URLSearchParams(location.search).get("t")];
+        if (asked) localStorage.setItem("theme", asked);
         theme = localStorage.getItem("theme");
       } catch (e) {}
       if (theme in themes && theme !== "ink") {
