@@ -24,6 +24,7 @@ sed -i 's/^remote_theme:.*//; s/^plugins:/plugins:\n  - jekyll-seo-tag\n  - jeky
 
 # variant styles + toggle
 cp "$REPO/_theme-previews/_base.scss" "$SRC/_sass/base.scss"
+cp "$REPO/_theme-previews/_prompt.scss" "$SRC/_sass/prompt.scss"
 cp "$REPO/_theme-previews/theme_toggle.html" "$SRC/_includes/theme_toggle.html"
 # apply a saved light/dark choice before first paint
 sed -i 's|<link rel="stylesheet" href="{{ "/assets/css/main.css"|<script>try{var t=localStorage.getItem("theme");if(t==="light"\|\|t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>\n  &|' "$SRC/_includes/head.html"
@@ -39,5 +40,7 @@ for f in "$REPO"/_theme-previews/variants/*.scss; do
   (cd "$REPO" && bundle exec ruby -e 'load Gem.bin_path("jekyll","jekyll")' build -q -s "$SRC" -d "$OUT/$name")
   rm -f "$OUT/$name/Makefile" "$OUT/$name/assets/css/style.css"
   python3 "$REPO/_theme-previews/relativize.py" "$OUT/$name"
+  # some hosts reject XML with DTDs
+  find "$OUT/$name" -name "*.svg" -exec sed -i "/<!DOCTYPE[^>]*>/d" {} +
   echo "built $name"
 done

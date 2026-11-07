@@ -1,5 +1,6 @@
 // 1 · Ink — the current look, cleaned up: monospace, pure black/white,
-// inverted code blocks, real dark palette instead of a CSS invert filter.
+// inverted code blocks, real dark palette instead of a CSS invert filter,
+// plus the shell-prompt flourishes (see _prompt.scss).
 @mixin light-tokens {
   --bg: #ffffff; --text: #111111; --heading: #000000; --muted: #6b6b6b;
   --link: #000000; --link-line: #00000055; --line: #d0d0d0;
@@ -15,3 +16,4 @@
 :root { --font-body: #{"ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace"}; --fs: 16px; --lh: 1.5; --h1: 1.5em; }
 
 @import "base";
+@import "prompt";
