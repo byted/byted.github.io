@@ -1,0 +1,57 @@
+/* Graph block, only ever shown maximized, with its own light (Catppuccin Latte) surface so it works in dark mode too. */
+#ring-graph {
+  --bg: #eff1f5; --mantle: #e6e9ef; --line: #bcc0cc; --text: #4c4f69; --muted: #6c6f85;
+  position: relative; width: 100%; box-sizing: border-box; margin: 1.5em 0;
+  height: 70vh; min-height: 480px; display: flex; flex-direction: column;
+  background: var(--bg); color: var(--text);
+  font: 13px/1.4 system-ui, -apple-system, sans-serif;
+  border: 1px solid var(--line); border-radius: 8px; overflow: hidden;
+}
+#ring-graph[hidden] { display: none; }
+/* Maximize: real fullscreen, or a fixed overlay where element fullscreen is unavailable (iPhone Safari). */
+#ring-graph:fullscreen, #ring-graph.rg-maxed { height: 100vh; height: 100dvh; margin: 0; border: 0; border-radius: 0; }
+#ring-graph.rg-maxed { position: fixed; inset: 0; z-index: 1000; }
+/* The theme's dark mode inverts the whole body; invert the graph back so it keeps its Latte colours.
+   Fullscreen lifts the graph out of the body's invert, so there it needs none. */
+body[a="dark"] #ring-graph { filter: invert(1); }
+@media (prefers-color-scheme: dark) { body[a="auto"] #ring-graph { filter: invert(1); } }
+body[a="dark"] #ring-graph:fullscreen { filter: none; }
+@media (prefers-color-scheme: dark) { body[a="auto"] #ring-graph:fullscreen { filter: none; } }
+#ring-graph * { box-sizing: border-box; }
+#ring-graph a { color: #1e66f5; }
+.rg-toolbar { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; padding: 8px 16px; background: var(--mantle); border-bottom: 1px solid var(--line); }
+.rg-toolbar fieldset { border: 0; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; }
+.rg-toolbar legend { float: left; margin-right: 4px; color: var(--muted); font-size: 12px; }
+.rg-toolbar label { display: inline-flex; align-items: center; gap: 4px; cursor: pointer; white-space: nowrap; }
+.rg-toolbar input[type=checkbox] { margin: 0; accent-color: #1e66f5; }
+.rg-search { width: 13em; padding: 3px 8px; border: 1px solid var(--line); border-radius: 4px; background: #fff; color: var(--text); font: inherit; }
+.rg-toolbar button, .rg-close { padding: 3px 10px; border: 1px solid var(--line); border-radius: 4px; background: var(--bg); color: var(--text); font: inherit; cursor: pointer; }
+.rg-toolbar button:hover { background: #dce0e8; }
+.rg-toolbar button[aria-pressed="true"] { background: #1e66f5; border-color: #1e66f5; color: #fff; }
+/* Legend and details panel share the top right; the panel wins while it is open. */
+#ring-graph.rg-panel-open .rg-legend { display: none; }
+.rg-swatch { display: inline-block; width: 14px; height: 10px; border: 1.5px solid; border-radius: 3px; }
+.rg-stage { position: relative; flex: 1; min-height: 0; }
+.rg-canvas { position: absolute; inset: 0; }
+.rg-panel { position: absolute; top: 12px; right: 12px; width: 300px; max-height: calc(100% - 24px); overflow: auto; padding: 12px 14px; background: #fff; border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 4px 16px #4c4f6922; }
+.rg-panel[hidden] { display: none; }
+.rg-panel h3 { margin: 0 24px 4px 0; font-size: 15px; }
+.rg-panel h4 { margin: 10px 0 4px; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.rg-panel ul { margin: 0; padding-left: 0; list-style: none; }
+.rg-panel li { margin: 3px 0; }
+.rg-notes li::before { content: "· "; color: var(--muted); }
+.rg-close { position: absolute; top: 8px; right: 8px; padding: 0 7px; }
+.rg-muted { color: var(--muted); }
+.rg-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; vertical-align: middle; }
+.rg-legend { position: absolute; right: 12px; top: 12px; padding: 8px 10px; background: #ffffffd9; border: 1px solid var(--line); border-radius: 6px; font-size: 11px; display: grid; gap: 3px; pointer-events: none; }
+.rg-legend div { display: flex; align-items: center; gap: 6px; }
+.rg-legend b { font-weight: 600; color: var(--muted); }
+.rg-legend .box { width: 22px; height: 12px; border: 1.5px solid #8c8fa1; border-radius: 3px; background: #dee1e7; }
+.rg-hint { position: absolute; right: 12px; bottom: 12px; font-size: 11px; color: var(--muted); pointer-events: none; }
+@media (max-width: 640px) {
+  .rg-panel { left: 12px; right: 12px; width: auto; top: auto; bottom: 12px; max-height: 50%; }
+  .rg-hint { display: none; }
+  .rg-legend { right: 8px; top: 8px; padding: 5px 7px; font-size: 10px; }
+  .rg-legend b:last-child { display: none; }
+  .rg-panel { max-height: 45%; }
+}

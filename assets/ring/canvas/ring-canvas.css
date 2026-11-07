@@ -1,0 +1,100 @@
+/* Canvas pane extracted from the cmds share export of "Ring Character Universe".
+   Everything is scoped under .cmds-canvas so it cannot leak into the blog theme,
+   and the theme's own element rules (p, li, monospace body font) are overridden inside it. */
+.cmds-canvas {
+	/* snapshot light tokens (Obsidian theme) */
+	--text: #222222; --muted: #5c5c5c; --bg: #ffffff;
+	--accent: hsl(258, 88%, 66%); --border: #e4e4e4;
+	--code-bg: #f6f6f6; --card-bg: #fafafa;
+	--cv-c1: #e93147; --cv-c2: #ec7500; --cv-c3: #e0ac00;
+	--cv-c4: #08b94e; --cv-c5: #00bfbc; --cv-c6: #7852ee;
+
+	/* fits the text column; the fullscreen button maximizes it */
+	position: relative; width: 100%; margin: 1.5em 0; box-sizing: border-box;
+	height: 70vh; min-height: 320px;
+	border: 1px solid var(--border); border-radius: 12px;
+
+	overflow: hidden; touch-action: none;
+	background-color: var(--bg);
+	background-image: radial-gradient(circle, color-mix(in srgb, var(--muted) 35%, transparent) 1px, transparent 1.2px);
+	background-size: 22px 22px;
+	cursor: grab; user-select: none;
+
+	/* snapshot body/#note-content typography */
+	color: var(--text);
+	font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard Variable', 'Pretendard', 'Apple SD Gothic Neo', 'Segoe UI', system-ui, sans-serif;
+	font-size: 16px; line-height: 1.75; overflow-wrap: break-word;
+	-webkit-font-smoothing: antialiased;
+}
+.cmds-canvas *, .cmds-canvas *::before, .cmds-canvas *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Dark: the theme inverts the whole body. Invert the pane back, then use the snapshot's own dark tokens. */
+body[a="dark"] .cmds-canvas {
+	filter: invert(1);
+	--text: #f2f4f3; --muted: #9aa39d; --bg: #06080a; --accent: #E985A2;
+	--border: #1a231f; --code-bg: #161c19; --card-bg: #0d1411;
+}
+@media (prefers-color-scheme: dark) {
+	body[a="auto"] .cmds-canvas {
+		filter: invert(1);
+		--text: #f2f4f3; --muted: #9aa39d; --bg: #06080a; --accent: #E985A2;
+		--border: #1a231f; --code-bg: #161c19; --card-bg: #0d1411;
+	}
+	/* fullscreen puts the pane in the top layer, outside the body's invert, so drop the counter-invert */
+	body[a="auto"] .cmds-canvas:fullscreen { filter: none; }
+}
+body[a="dark"] .cmds-canvas:fullscreen { filter: none; }
+
+.cmds-canvas.dragging { cursor: grabbing; }
+.cmds-canvas:fullscreen { border-radius: 0; border: none; height: 100vh; left: 0; width: 100vw; margin: 0; }
+.cmds-canvas .cmds-canvas-world { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+.cmds-canvas .cmds-canvas-empty { padding: 2rem; color: var(--muted); text-align: center; }
+
+.cmds-canvas .cv-edges { position: absolute; left: 0; top: 0; overflow: visible; pointer-events: none; }
+.cmds-canvas .cv-edge path { fill: none; stroke: var(--edge-color, var(--muted)); stroke-width: 2.5; stroke-linecap: round; }
+.cmds-canvas .cv-edge polygon { fill: var(--edge-color, var(--muted)); stroke: var(--edge-color, var(--muted)); stroke-width: 1; stroke-linejoin: round; }
+.cmds-canvas .cv-edge-label {
+	position: absolute; transform: translate(-50%, -50%);
+	font-size: 0.8rem; font-weight: 600; line-height: 1.75; padding: 0.15rem 0.55rem; border-radius: 6px;
+	background: var(--bg); color: var(--edge-color, var(--muted));
+	border: 1px solid color-mix(in srgb, var(--edge-color, var(--muted)) 40%, var(--border));
+	white-space: nowrap;
+}
+
+.cmds-canvas .cv-node {
+	position: absolute; display: flex; flex-direction: column;
+	border-radius: 12px; overflow: visible;
+	border: 2px solid var(--node-color, var(--border));
+	background: color-mix(in srgb, var(--node-color, transparent) 9%, var(--card-bg));
+	box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 6px 18px rgba(0,0,0,0.06);
+}
+.cmds-canvas .cv-body {
+	flex: 1; min-height: 0; overflow: auto; padding: 0.9rem 1.1rem;
+	font-size: 0.95rem; line-height: 1.6; user-select: text; cursor: auto;
+	border-radius: 10px; overscroll-behavior: contain;
+}
+/* #note-content p/ul/li rules from the snapshot, applied inside cards */
+.cmds-canvas .cv-body p { margin: 0.85rem 0; }
+.cmds-canvas .cv-body ul, .cmds-canvas .cv-body ol { margin: 0.85rem 0 0.85rem 1.4rem; }
+.cmds-canvas .cv-body li { margin: 0.35rem 0; }
+.cmds-canvas .cv-body li > ul, .cmds-canvas .cv-body li > ol { margin: 0.25rem 0 0.25rem 1.2rem; }
+.cmds-canvas .cv-body > :first-child { margin-top: 0 !important; }
+.cmds-canvas .cv-body > :last-child { margin-bottom: 0 !important; }
+
+.cmds-canvas .cmds-canvas-ui {
+	position: absolute; right: 12px; bottom: 12px; z-index: 2;
+	display: flex; gap: 4px; padding: 4px; border-radius: 10px;
+	background: color-mix(in srgb, var(--card-bg) 88%, transparent);
+	border: 1px solid var(--border); backdrop-filter: blur(8px);
+}
+.cmds-canvas .cmds-canvas-ui button {
+	width: 30px; height: 30px; border: none; border-radius: 7px; cursor: pointer;
+	background: transparent; color: var(--text); display: grid; place-items: center;
+}
+.cmds-canvas .cmds-canvas-ui button:hover { background: var(--code-bg); color: var(--accent); }
+.cmds-canvas .cmds-canvas-ui svg { width: 15px; height: 15px; }
+.cmds-canvas .cmds-canvas-hint {
+	position: absolute; left: 12px; bottom: 12px; z-index: 2;
+	font-size: 0.72rem; line-height: 1.75; color: var(--muted); pointer-events: none;
+	background: color-mix(in srgb, var(--card-bg) 80%, transparent); padding: 0.2rem 0.5rem; border-radius: 6px;
+}

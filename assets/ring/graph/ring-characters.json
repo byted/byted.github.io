@@ -1,0 +1,950 @@
+{
+  "source": "Ring Character Universe.canvas (Obsidian)",
+  "books": {
+    "Ring": {
+      "order": 1,
+      "canvasColor": "4"
+    },
+    "Spiral": {
+      "order": 2,
+      "canvasColor": "6"
+    },
+    "Loop": {
+      "order": 3,
+      "canvasColor": "3"
+    },
+    "Birthday": {
+      "order": 4,
+      "canvasColor": null
+    },
+    "Tide": {
+      "order": 5,
+      "canvasColor": "1"
+    },
+    "S": {
+      "order": 6,
+      "canvasColor": "5"
+    }
+  },
+  "edgeCategories": [
+    "family",
+    "romance",
+    "rebirth",
+    "generic"
+  ],
+  "nodes": [
+    {
+      "id": "akane",
+      "name": "Akane (24)",
+      "book": "S",
+      "notes": [
+        "pregnant ",
+        "teacher",
+        "rescued from Niimura as a girl by Kashiwada (S)",
+        "marries Takanori (S)"
+      ],
+      "canvas": {
+        "x": 254,
+        "y": -65,
+        "width": 133,
+        "height": 244
+      }
+    },
+    {
+      "id": "masako_maruyama",
+      "name": "Masako Maruyama (Sadakos reincarnate)",
+      "book": "Spiral",
+      "notes": [
+        "first reborn Sadakos (Spiral)",
+        "womb can rebirth the dead (S)",
+        "dies the moment Sadako passes into Haruna (Tide)"
+      ],
+      "canvas": {
+        "x": 140,
+        "y": -360,
+        "width": 380,
+        "height": 159
+      }
+    },
+    {
+      "id": "takanori_ando",
+      "name": "Takanori Ando",
+      "book": "Spiral",
+      "notes": [
+        "VFX artist",
+        "drowned as a child, reborn via Masako (Spiral)"
+      ],
+      "canvas": {
+        "x": 492,
+        "y": 180,
+        "width": 288,
+        "height": 124
+      }
+    },
+    {
+      "id": "ryuji_takayama",
+      "name": "Ryuji Takayama / Tetsuo Yamamura",
+      "book": "Ring",
+      "notes": [
+        "figured out the ring virus",
+        "Sadako's younger brother (Tide)"
+      ],
+      "canvas": {
+        "x": -940,
+        "y": 307,
+        "width": 306,
+        "height": 100
+      }
+    },
+    {
+      "id": "yoneda",
+      "name": "Yoneda",
+      "book": "S",
+      "notes": [
+        "Boss of Studio Oz"
+      ],
+      "canvas": {
+        "x": 492,
+        "y": 406,
+        "width": 288,
+        "height": 74
+      }
+    },
+    {
+      "id": "kiyomi_sakata",
+      "name": "Kiyomi Sakata",
+      "book": "S",
+      "notes": [
+        "influential actress/producer",
+        "received suicide video via email",
+        "was supposed to star on Ring movie adaption -> threatened "
+      ],
+      "canvas": {
+        "x": 492,
+        "y": 731,
+        "width": 300,
+        "height": 159
+      }
+    },
+    {
+      "id": "kaoru_futami",
+      "name": "Kaoru Futami",
+      "book": "Loop",
+      "notes": [
+        "Ryuji's clone, born in the real world",
+        "his MHC-resistant DNA becomes the cure (Birthday)",
+        "re-enters Loop, wakes as revived Ryuji, makes ring virus vaccine (Loop)"
+      ],
+      "canvas": {
+        "x": -1065,
+        "y": -500,
+        "width": 250,
+        "height": 220
+      }
+    },
+    {
+      "id": "shizuko_yamamura",
+      "name": "Shizuko Yamamura / Mizuho Takayama",
+      "book": "Ring",
+      "notes": [
+        "psychic; pulled the Ascetic's statue from the sea",
+        "staged suicide in Mt Mihara crater (Tide)",
+        "still alive at end of Tide"
+      ],
+      "canvas": {
+        "x": -340,
+        "y": -860,
+        "width": 380,
+        "height": 196
+      }
+    },
+    {
+      "id": "heihachiro_ikuma",
+      "name": "Heihachiro Ikuma",
+      "book": "Ring",
+      "notes": [],
+      "canvas": {
+        "x": 326,
+        "y": -860,
+        "width": 250,
+        "height": 60
+      }
+    },
+    {
+      "id": "yoko_asakawa",
+      "name": "Yoko Asakawa",
+      "book": "Ring",
+      "notes": [
+        "died of Ring"
+      ],
+      "canvas": {
+        "x": -1500,
+        "y": 571,
+        "width": 181,
+        "height": 85
+      }
+    },
+    {
+      "id": "kenzo_yoshino",
+      "name": "Kenzo Yoshino",
+      "book": "Ring",
+      "notes": [
+        "journalist"
+      ],
+      "canvas": {
+        "x": -1443,
+        "y": 200,
+        "width": 249,
+        "height": 73
+      }
+    },
+    {
+      "id": "kazuyuki_asakawa",
+      "name": "Kazuyuki Asakawa",
+      "book": "Ring",
+      "notes": [
+        "works as a journalist",
+        "discovers video",
+        "writes Ring book",
+        "catatonic after crash; dies later (Spiral/Birthday)"
+      ],
+      "canvas": {
+        "x": -1340,
+        "y": 393,
+        "width": 240,
+        "height": 172
+      }
+    },
+    {
+      "id": "shizu_asakawa",
+      "name": "Shizu Asakawa",
+      "book": "Ring",
+      "notes": [
+        "died of Ring"
+      ],
+      "canvas": {
+        "x": -1285,
+        "y": 706,
+        "width": 185,
+        "height": 74
+      }
+    },
+    {
+      "id": "mitsuo_ando",
+      "name": "Mitsuo Ando",
+      "book": "Spiral",
+      "notes": [
+        "doctor, wealthy ",
+        "started orphanage: teach kids to teach kids to be great people",
+        "rebirthed peeps via Masako"
+      ],
+      "canvas": {
+        "x": -240,
+        "y": 180,
+        "width": 280,
+        "height": 206
+      }
+    },
+    {
+      "id": "takayuki_maniwa",
+      "name": "Takayuki Maniwa",
+      "book": "Tide",
+      "notes": [
+        "detective"
+      ],
+      "canvas": {
+        "x": -840,
+        "y": -800,
+        "width": 238,
+        "height": 72
+      }
+    },
+    {
+      "id": "jotaro_nagao",
+      "name": "Dr Jotaro Nagao",
+      "book": "Ring",
+      "notes": [
+        "had smallpox, infected Sadako"
+      ],
+      "canvas": {
+        "x": 576,
+        "y": -677,
+        "width": 290,
+        "height": 97
+      }
+    },
+    {
+      "id": "takashi_yamamura",
+      "name": "Takashi Yamamura",
+      "book": "Ring",
+      "notes": [],
+      "canvas": {
+        "x": -140,
+        "y": -1048,
+        "width": 250,
+        "height": 60
+      }
+    },
+    {
+      "id": "tomoko_oishi",
+      "name": "Tomoko Oishi",
+      "book": "Ring",
+      "notes": [
+        "died of Ring"
+      ],
+      "canvas": {
+        "x": -1060,
+        "y": 600,
+        "width": 200,
+        "height": 85
+      }
+    },
+    {
+      "id": "hideyuki_futami",
+      "name": "Hideyuki Futami",
+      "book": "Loop",
+      "notes": [
+        "researcher on Loop",
+        "had MHC",
+        "survived thanks to Kaoru's MHC-resistant DNA (Birthday)"
+      ],
+      "canvas": {
+        "x": -1879,
+        "y": -400,
+        "width": 329,
+        "height": 180
+      }
+    },
+    {
+      "id": "machiko_futami",
+      "name": "Machiko Futami",
+      "book": "Loop",
+      "notes": [],
+      "canvas": {
+        "x": -1480,
+        "y": -178,
+        "width": 200,
+        "height": 60
+      }
+    },
+    {
+      "id": "cristoph_eliot",
+      "name": "Cristoph Eliot",
+      "book": "Loop",
+      "notes": [
+        "creator of Loop"
+      ],
+      "canvas": {
+        "x": -1670,
+        "y": 48,
+        "width": 260,
+        "height": 90
+      }
+    },
+    {
+      "id": "ryoji_sugiura",
+      "name": "Ryoji Sugiura",
+      "book": "Loop",
+      "notes": [
+        "had MHC",
+        "killed himself after feeling like a drag on Reiko & Kaoru"
+      ],
+      "canvas": {
+        "x": -1879,
+        "y": -663,
+        "width": 280,
+        "height": 130
+      }
+    },
+    {
+      "id": "kaoru_son",
+      "name": "Kaoru & Reiko's son",
+      "book": "Birthday",
+      "notes": [
+        "born at end of Birthday"
+      ],
+      "canvas": {
+        "x": -1480,
+        "y": -595,
+        "width": 215,
+        "height": 99
+      }
+    },
+    {
+      "id": "reiko_sugiura",
+      "name": "Reiko Sugiura",
+      "book": "Loop",
+      "notes": [
+        "MHC carrier",
+        "lost husband to MHC"
+      ],
+      "canvas": {
+        "x": -1443,
+        "y": -920,
+        "width": 250,
+        "height": 100
+      }
+    },
+    {
+      "id": "toru_amano",
+      "name": "Toru Amano",
+      "book": "Loop",
+      "notes": [
+        "worked on Loop at the end"
+      ],
+      "canvas": {
+        "x": -1265,
+        "y": -708,
+        "width": 260,
+        "height": 100
+      }
+    },
+    {
+      "id": "hiroyuki_niimura",
+      "name": "Hiroyuki Niimura",
+      "book": "S",
+      "notes": [
+        "lives in 303 / the suicide studio apartment",
+        "the real serial killer of the girls (S)",
+        "dies a violent death (S)"
+      ],
+      "canvas": {
+        "x": -485,
+        "y": 480,
+        "width": 310,
+        "height": 172
+      }
+    },
+    {
+      "id": "miyashita",
+      "name": "Miyashita",
+      "book": "Spiral",
+      "notes": [
+        "pathologist",
+        "briefs Kihara on the virus (S)"
+      ],
+      "canvas": {
+        "x": -700,
+        "y": 48,
+        "width": 300,
+        "height": 112
+      }
+    },
+    {
+      "id": "seiji_kashiwada",
+      "name": "Seiji Kashiwada / Toru Kawaguchi",
+      "book": "S",
+      "notes": [
+        "split personalities (Tide)",
+        "executed for murder (S)",
+        "projected s/t on a camera while being executed (S)",
+        "\"suicide man\" from video (S)"
+      ],
+      "canvas": {
+        "x": -634,
+        "y": -201,
+        "width": 354,
+        "height": 200
+      }
+    },
+    {
+      "id": "rie_yoshina",
+      "name": "Rie Yoshina",
+      "book": "Tide",
+      "notes": [],
+      "canvas": {
+        "x": -530,
+        "y": -545,
+        "width": 250,
+        "height": 60
+      }
+    },
+    {
+      "id": "haruna_tajima",
+      "name": "Haruna Tajima",
+      "book": "Tide",
+      "notes": [
+        "gets sick; Sadako takes her over when Masako dies (Tide)"
+      ],
+      "canvas": {
+        "x": -280,
+        "y": -369,
+        "width": 250,
+        "height": 100
+      }
+    },
+    {
+      "id": "tsuyoshi_kihara",
+      "name": "Tsuyoshi Kihara",
+      "book": "S",
+      "notes": [
+        "nonfiction author",
+        "researches the Kashiwada case"
+      ],
+      "canvas": {
+        "x": 880,
+        "y": 500,
+        "width": 260,
+        "height": 110
+      }
+    },
+    {
+      "id": "sadako_yamamura",
+      "name": "Sadako Yamamura (OG)",
+      "book": "Ring",
+      "notes": [
+        "psychic; made the cursed video by thought projection",
+        "testicular feminization syndrome (intersex)",
+        "her hatred + Nagao's smallpox → ring virus"
+      ],
+      "canvas": {
+        "x": 15,
+        "y": -677,
+        "width": 372,
+        "height": 192
+      }
+    },
+    {
+      "id": "genji",
+      "name": "Genji",
+      "book": "Ring",
+      "notes": [],
+      "canvas": {
+        "x": -280,
+        "y": -575,
+        "width": 250,
+        "height": 60
+      }
+    },
+    {
+      "id": "mai_takano",
+      "name": "Mai Takano",
+      "book": "Spiral",
+      "notes": [
+        "watched video while ovulating → gave birth to reborn Sadako (Masako)",
+        "died in an air shaft right after"
+      ],
+      "canvas": {
+        "x": -634,
+        "y": 816,
+        "width": 297,
+        "height": 172
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "takanori_ando",
+      "to": "yoneda",
+      "directed": true,
+      "label": "Works for",
+      "category": "generic"
+    },
+    {
+      "from": "akane",
+      "to": "takanori_ando",
+      "directed": false,
+      "label": "Couple",
+      "category": "romance"
+    },
+    {
+      "from": "kiyomi_sakata",
+      "to": "yoneda",
+      "directed": true,
+      "label": "Asked for help w/ video",
+      "category": "generic"
+    },
+    {
+      "from": "seiji_kashiwada",
+      "to": "akane",
+      "directed": true,
+      "label": "Father",
+      "category": "family"
+    },
+    {
+      "from": "mitsuo_ando",
+      "to": "ryuji_takayama",
+      "directed": true,
+      "label": "Classmates; Autopsy'd rebirthed",
+      "category": "rebirth"
+    },
+    {
+      "from": "masako_maruyama",
+      "to": "akane",
+      "directed": true,
+      "label": "mother of",
+      "category": "family"
+    },
+    {
+      "from": "ryuji_takayama",
+      "to": "seiji_kashiwada",
+      "directed": true,
+      "label": "Identity after Rebirth in Loop",
+      "category": "rebirth"
+    },
+    {
+      "from": "mitsuo_ando",
+      "to": "takanori_ando",
+      "directed": true,
+      "label": "Dad; rebirthed",
+      "category": "family"
+    },
+    {
+      "from": "akane",
+      "to": "mitsuo_ando",
+      "directed": true,
+      "label": "Grew up in Orphanage of",
+      "category": "generic"
+    },
+    {
+      "from": "masako_maruyama",
+      "to": "seiji_kashiwada",
+      "directed": true,
+      "label": "Mother (Spiral) Lovers (S)",
+      "category": "family"
+    },
+    {
+      "from": "kiyomi_sakata",
+      "to": "hiroyuki_niimura",
+      "directed": true,
+      "label": "Mother",
+      "category": "family"
+    },
+    {
+      "from": "seiji_kashiwada",
+      "to": "hiroyuki_niimura",
+      "directed": true,
+      "label": "Tutor of",
+      "category": "generic"
+    },
+    {
+      "from": "kaoru_futami",
+      "to": "seiji_kashiwada",
+      "directed": true,
+      "label": "reborn in Loop as, via Ryuji",
+      "category": "rebirth"
+    },
+    {
+      "from": "mai_takano",
+      "to": "ryuji_takayama",
+      "directed": true,
+      "label": "worked for",
+      "category": "generic"
+    },
+    {
+      "from": "hideyuki_futami",
+      "to": "kaoru_futami",
+      "directed": true,
+      "label": "dad of",
+      "category": "family"
+    },
+    {
+      "from": "hideyuki_futami",
+      "to": "cristoph_eliot",
+      "directed": false,
+      "label": "colleagues",
+      "category": "generic"
+    },
+    {
+      "from": "ryoji_sugiura",
+      "to": "reiko_sugiura",
+      "directed": true,
+      "label": "son of",
+      "category": "family"
+    },
+    {
+      "from": "reiko_sugiura",
+      "to": "kaoru_futami",
+      "directed": false,
+      "label": "couple met in hospital",
+      "category": "romance"
+    },
+    {
+      "from": "sadako_yamamura",
+      "to": "masako_maruyama",
+      "directed": true,
+      "label": "reborn as via Mai",
+      "category": "rebirth"
+    },
+    {
+      "from": "shizuko_yamamura",
+      "to": "sadako_yamamura",
+      "directed": true,
+      "label": "mother of",
+      "category": "family"
+    },
+    {
+      "from": "shizuko_yamamura",
+      "to": "ryuji_takayama",
+      "directed": true,
+      "label": "mother of",
+      "category": "family"
+    },
+    {
+      "from": "heihachiro_ikuma",
+      "to": "sadako_yamamura",
+      "directed": true,
+      "label": "dad of",
+      "category": "family"
+    },
+    {
+      "from": "shizuko_yamamura",
+      "to": "heihachiro_ikuma",
+      "directed": true,
+      "label": "couple",
+      "category": "romance"
+    },
+    {
+      "from": "kazuyuki_asakawa",
+      "to": "shizu_asakawa",
+      "directed": false,
+      "label": "couple",
+      "category": "romance"
+    },
+    {
+      "from": "yoko_asakawa",
+      "to": "kazuyuki_asakawa",
+      "directed": true,
+      "label": "daughter of",
+      "category": "family"
+    },
+    {
+      "from": "yoko_asakawa",
+      "to": "shizu_asakawa",
+      "directed": true,
+      "label": "daughter of",
+      "category": "family"
+    },
+    {
+      "from": "kenzo_yoshino",
+      "to": "kazuyuki_asakawa",
+      "directed": false,
+      "label": "colleagues",
+      "category": "generic"
+    },
+    {
+      "from": "kazuyuki_asakawa",
+      "to": "ryuji_takayama",
+      "directed": false,
+      "label": "best friends",
+      "category": "generic"
+    },
+    {
+      "from": "haruna_tajima",
+      "to": "rie_yoshina",
+      "directed": true,
+      "label": "friends",
+      "category": "generic"
+    },
+    {
+      "from": "masako_maruyama",
+      "to": "haruna_tajima",
+      "directed": true,
+      "label": "takes over",
+      "category": "rebirth"
+    },
+    {
+      "from": "takayuki_maniwa",
+      "to": "shizuko_yamamura",
+      "directed": true,
+      "label": "investigates",
+      "category": "generic"
+    },
+    {
+      "from": "mitsuo_ando",
+      "to": "masako_maruyama",
+      "directed": false,
+      "label": "bargain rebirth Takanori & Ryuji",
+      "category": "rebirth"
+    },
+    {
+      "from": "jotaro_nagao",
+      "to": "sadako_yamamura",
+      "directed": true,
+      "label": "raped & killed",
+      "category": "generic"
+    },
+    {
+      "from": "takashi_yamamura",
+      "to": "shizuko_yamamura",
+      "directed": false,
+      "label": "cousins",
+      "category": "family"
+    },
+    {
+      "from": "genji",
+      "to": "shizuko_yamamura",
+      "directed": false,
+      "label": "lovers / stages her death (Tide)",
+      "category": "romance"
+    },
+    {
+      "from": "kaoru_son",
+      "to": "reiko_sugiura",
+      "directed": true,
+      "label": "son of",
+      "category": "family"
+    },
+    {
+      "from": "kaoru_son",
+      "to": "kaoru_futami",
+      "directed": true,
+      "label": "son of",
+      "category": "family"
+    },
+    {
+      "from": "hideyuki_futami",
+      "to": "kaoru_son",
+      "directed": true,
+      "label": "grandfather of",
+      "category": "family"
+    },
+    {
+      "from": "hideyuki_futami",
+      "to": "machiko_futami",
+      "directed": false,
+      "label": "couple",
+      "category": "romance"
+    },
+    {
+      "from": "toru_amano",
+      "to": "reiko_sugiura",
+      "directed": true,
+      "label": "explains Loop",
+      "category": "generic"
+    },
+    {
+      "from": "toru_amano",
+      "to": "kaoru_futami",
+      "directed": true,
+      "label": "explains Loop",
+      "category": "generic"
+    },
+    {
+      "from": "tomoko_oishi",
+      "to": "shizu_asakawa",
+      "directed": true,
+      "label": "niece of",
+      "category": "family"
+    },
+    {
+      "from": "tomoko_oishi",
+      "to": "kazuyuki_asakawa",
+      "directed": true,
+      "label": "niece of; starts his investigation",
+      "category": "family"
+    },
+    {
+      "from": "seiji_kashiwada",
+      "to": "takayuki_maniwa",
+      "directed": true,
+      "label": "tasks",
+      "category": "generic"
+    },
+    {
+      "from": "seiji_kashiwada",
+      "to": "rie_yoshina",
+      "directed": true,
+      "label": "teacher of",
+      "category": "generic"
+    },
+    {
+      "from": "hiroyuki_niimura",
+      "to": "mai_takano",
+      "directed": false,
+      "label": "lived in same apartment at different times",
+      "category": "generic"
+    },
+    {
+      "from": "tsuyoshi_kihara",
+      "to": "seiji_kashiwada",
+      "directed": true,
+      "label": "researches case of",
+      "category": "generic"
+    },
+    {
+      "from": "tsuyoshi_kihara",
+      "to": "miyashita",
+      "directed": true,
+      "label": "interviews",
+      "category": "generic"
+    },
+    {
+      "from": "tsuyoshi_kihara",
+      "to": "kiyomi_sakata",
+      "directed": true,
+      "label": "researches",
+      "category": "generic"
+    },
+    {
+      "from": "mai_takano",
+      "to": "masako_maruyama",
+      "directed": true,
+      "label": "mother of / birthed",
+      "category": "family"
+    },
+    {
+      "from": "tsuyoshi_kihara",
+      "to": "takanori_ando",
+      "directed": true,
+      "label": "investigates with",
+      "category": "generic"
+    },
+    {
+      "from": "masako_maruyama",
+      "to": "takanori_ando",
+      "directed": true,
+      "label": "mother of",
+      "category": "family"
+    },
+    {
+      "from": "miyashita",
+      "to": "mitsuo_ando",
+      "directed": false,
+      "label": "classmates",
+      "category": "generic"
+    },
+    {
+      "from": "miyashita",
+      "to": "ryuji_takayama",
+      "directed": true,
+      "label": "helped revive",
+      "category": "rebirth"
+    },
+    {
+      "from": "machiko_futami",
+      "to": "kaoru_futami",
+      "directed": true,
+      "label": "adoptive mother of",
+      "category": "family"
+    },
+    {
+      "from": "cristoph_eliot",
+      "to": "kaoru_futami",
+      "directed": true,
+      "label": "creates (from Loop data)",
+      "category": "rebirth"
+    },
+    {
+      "from": "ryuji_takayama",
+      "to": "kaoru_futami",
+      "directed": true,
+      "label": "reborn outside simulation",
+      "category": "rebirth"
+    },
+    {
+      "from": "hideyuki_futami",
+      "to": "toru_amano",
+      "directed": false,
+      "label": "colleagues",
+      "category": "generic"
+    },
+    {
+      "from": "cristoph_eliot",
+      "to": "ryuji_takayama",
+      "directed": false,
+      "label": "communicate last minute in Ring",
+      "category": "generic"
+    }
+  ]
+}
