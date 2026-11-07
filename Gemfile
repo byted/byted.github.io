@@ -6,6 +6,8 @@ source "https://rubygems.org"
 # The theme (riggraz/no-style-please) is loaded via `remote_theme` in _config.yml.
 
 gem "webrick"
+gem "bigdecimal"
+gem "csv"
 
 group :jekyll_plugins do
   gem "github-pages"
