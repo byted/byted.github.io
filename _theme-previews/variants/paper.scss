@@ -1,0 +1,35 @@
+// 2 · Paper — black/white, but a bookish serif body on warm off-white.
+// Monospace only for dates, labels and code.
+@mixin light-tokens {
+  --bg: #fbfaf7; --text: #1c1b19; --heading: #000000; --muted: #77736b;
+  --link: #1c1b19; --link-line: #1c1b1966; --line: #dedad2;
+  --code-bg: #efece5; --code-text: #1c1b19;
+  --sel: #1c1b19; --sel-text: #fbfaf7; --target: #f4ebc6;
+  --quote-line: #1c1b19;
+}
+@mixin dark-tokens {
+  --bg: #161514; --text: #e6e2da; --heading: #ffffff; --muted: #8f8a80;
+  --link: #e6e2da; --link-line: #e6e2da66; --line: #34322e;
+  --code-bg: #23211f; --code-text: #e6e2da;
+  --sel: #e6e2da; --sel-text: #161514; --target: #3d3620;
+  --quote-line: #e6e2da;
+}
+:root {
+  --font-body: #{"'Iowan Old Style', Charter, 'Palatino Linotype', Palatino, Georgia, serif"};
+  --fs: 18px; --lh: 1.65; --measure: 620px; --h1: 1.9em; --meta-fs: 0.75em;
+}
+
+@import "base";
+
+h1, h2, h3 { font-weight: 600; letter-spacing: -0.01em; }
+header h1 { font-style: italic; font-weight: 400; }
+
+// section labels ("myself", "thoughts") as small mono caps
+.w > ul > li:not(:has(a)) {
+  font-family: $mono; font-size: 0.7em; text-transform: uppercase;
+  letter-spacing: 0.12em; color: var(--muted); margin-top: 2rem; list-style: none;
+}
+.w > ul { padding-left: 0; }
+.w > ul > ul { padding-left: 0; list-style: none; }
+.w ul li > span:first-child { margin-right: 0.6em; }
+a { text-decoration-thickness: 0.5px; }

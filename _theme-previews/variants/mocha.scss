@@ -1,0 +1,22 @@
+// 3 · Mocha — Catppuccin Latte (light) / Mocha (dark), monospace.
+// Same layout as today, just the palette: mauve links, peach dates.
+@mixin light-tokens {
+  --bg: #eff1f5; --text: #4c4f69; --heading: #4c4f69; --muted: #8c8fa1;
+  --link: #8839ef; --link-line: #8839ef55; --link-hover: #ea76cb; --line: #ccd0da;
+  --code-bg: #e6e9ef; --code-text: #4c4f69; --date: #fe640b;
+  --sel: #ccd0da; --target: #df8e1d33; --quote-line: #8839ef;
+  --hl-comment: #9ca0b0; --hl-kw: #8839ef; --hl-str: #40a02b; --hl-num: #fe640b; --hl-fn: #1e66f5; --hl-attr: #df8e1d;
+}
+@mixin dark-tokens {
+  --bg: #1e1e2e; --text: #cdd6f4; --heading: #cdd6f4; --muted: #7f849c;
+  --link: #cba6f7; --link-line: #cba6f755; --link-hover: #f5c2e7; --line: #45475a;
+  --code-bg: #181825; --code-text: #cdd6f4; --date: #fab387;
+  --sel: #45475a; --target: #f9e2af33; --quote-line: #cba6f7;
+  --hl-comment: #6c7086; --hl-kw: #cba6f7; --hl-str: #a6e3a1; --hl-num: #fab387; --hl-fn: #89b4fa; --hl-attr: #f9e2af;
+}
+:root { --font-body: #{"ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace"}; --fs: 16px; --lh: 1.5; --h1: 1.5em; --radius: 4px; }
+
+@import "base";
+
+.w ul li > span:first-child, .post-meta { color: var(--date); }
+div.highlighter-rouge code { border: 1px solid var(--line); }

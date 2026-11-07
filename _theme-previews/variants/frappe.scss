@@ -1,0 +1,36 @@
+// 4 · Frappé — Catppuccin Latte (light) / Frappé (dark), system sans-serif.
+// Softer and more "modern blog": blue links without underline, lavender headings.
+@mixin light-tokens {
+  --bg: #eff1f5; --text: #4c4f69; --heading: #7287fd; --strong: #4c4f69; --muted: #8c8fa1;
+  --link: #1e66f5; --link-line: transparent; --link-hover: #209fb5; --line: #ccd0da;
+  --code-bg: #e6e9ef; --code-text: #d20f39;
+  --sel: #bcc0cc; --target: #df8e1d33; --quote-line: #7287fd; --quote-text: #6c6f85;
+  --hl-comment: #9ca0b0; --hl-kw: #8839ef; --hl-str: #40a02b; --hl-num: #fe640b; --hl-fn: #1e66f5; --hl-attr: #df8e1d;
+  --block-text: #4c4f69;
+}
+@mixin dark-tokens {
+  --bg: #303446; --text: #c6d0f5; --heading: #babbf1; --strong: #c6d0f5; --muted: #838ba7;
+  --link: #8caaee; --link-line: transparent; --link-hover: #99d1db; --line: #51576d;
+  --code-bg: #292c3c; --code-text: #ea999c;
+  --sel: #51576d; --target: #e5c89033; --quote-line: #babbf1; --quote-text: #a5adce;
+  --hl-comment: #737994; --hl-kw: #ca9ee6; --hl-str: #a6d189; --hl-num: #ef9f76; --hl-fn: #8caaee; --hl-attr: #e5c890;
+  --block-text: #c6d0f5;
+}
+:root {
+  --font-body: #{"system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif"};
+  --fs: 17px; --lh: 1.65; --measure: 660px; --h1: 1.75em; --radius: 6px; --meta-fs: 0.82em;
+}
+
+@import "base";
+
+h1, h2, h3 { font-weight: 650; letter-spacing: -0.015em; }
+header h1 { color: var(--text); }
+a { text-decoration-line: none; }
+a:hover { text-decoration-line: underline; }
+.post-content a, article a { text-decoration-line: underline; text-decoration-color: color-mix(in srgb, var(--link) 35%, transparent); }
+div.highlighter-rouge code { color: var(--block-text); }
+html blockquote { border-left-width: 3px; font-style: normal; }
+.w > ul > li:not(:has(a)) { font-weight: 600; color: var(--heading); list-style: none; margin-top: 1.5rem; }
+.w > ul { padding-left: 0; }
+.w > ul > ul { padding-left: 1rem; }
+.w ul li > span:first-child { margin-right: 0.5em; }
