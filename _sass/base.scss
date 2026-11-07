@@ -1,4 +1,4 @@
-// Shared structure for all theme previews. Each variant defines
+// Shared structure for all themes (_sass/theme-*.scss). Each theme defines
 // `light-tokens` / `dark-tokens` mixins plus any extras, then imports this.
 // Colors live in CSS custom properties so light/dark switch without the
 // old `filter: invert(1)` trick.
@@ -136,22 +136,6 @@ img { max-width: 100%; display: block; margin: 0 auto; }
   .nf, .nx, .fm, .nb { color: var(--hl-fn, inherit); }
   .na, .nt, .py { color: var(--hl-attr, inherit); }
 }
-
-// ---------------- light/dark toggle ---------------- //
-.theme-toggle {
-  position: fixed;
-  top: 0.75rem;
-  right: 0.75rem;
-  font: 12px/1 $mono;
-  color: var(--muted);
-  background: var(--bg);
-  border: 1px solid var(--line);
-  border-radius: var(--radius, 0);
-  padding: 0.45rem 0.6rem;
-  cursor: pointer;
-  z-index: 10;
-}
-.theme-toggle:hover { color: var(--text); border-color: var(--muted); }
 
 @media (max-width: 480px) {
   .w { padding-top: 3.5rem; }

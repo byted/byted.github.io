@@ -28,22 +28,17 @@
 }
 .cmds-canvas *, .cmds-canvas *::before, .cmds-canvas *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* Dark: the theme inverts the whole body. Invert the pane back, then use the snapshot's own dark tokens. */
+/* Dark: use the snapshot's own dark tokens. */
 body[a="dark"] .cmds-canvas {
-	filter: invert(1);
 	--text: #f2f4f3; --muted: #9aa39d; --bg: #06080a; --accent: #E985A2;
 	--border: #1a231f; --code-bg: #161c19; --card-bg: #0d1411;
 }
 @media (prefers-color-scheme: dark) {
 	body[a="auto"] .cmds-canvas {
-		filter: invert(1);
 		--text: #f2f4f3; --muted: #9aa39d; --bg: #06080a; --accent: #E985A2;
 		--border: #1a231f; --code-bg: #161c19; --card-bg: #0d1411;
 	}
-	/* fullscreen puts the pane in the top layer, outside the body's invert, so drop the counter-invert */
-	body[a="auto"] .cmds-canvas:fullscreen { filter: none; }
 }
-body[a="dark"] .cmds-canvas:fullscreen { filter: none; }
 
 .cmds-canvas.dragging { cursor: grabbing; }
 .cmds-canvas:fullscreen { border-radius: 0; border: none; height: 100vh; left: 0; width: 100vw; margin: 0; }

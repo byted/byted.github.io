@@ -2,40 +2,23 @@
 layout: post
 ---
 <style>
-  /* our style inverts the background by default for code blocks
-  remove the background for mermaid */
-  .language-mermaid {
-    background: none !important;
-  }
-  blockquote {
-    font-style: italic;
-    border: none;
-    border-bottom: thin solid #00000042;
-    border-left: thin solid #00000042;
-    padding: 1rem;
-    margin: 1em;
-  }
-
   del {
     text-decoration-thickness: 0.08em;
-  }
-
-  body {
-    color: #404040;
   }
 </style>
 
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/+esm';
-  mermaid.initialize({ startOnLoad: true });
+  const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+  mermaid.initialize({ startOnLoad: true, theme: dark ? 'dark' : 'neutral' });
   await mermaid.run({
       querySelector: '.language-mermaid',
   });
 </script>
 
 {% if page.tags %}
-  <div class="tags-meta" style="font-size: 0.9em; margin-bottom: 1em; color: #888;">
-    tags: 
+  <div class="tags-meta" style="font-size: 0.9em; margin-bottom: 1em;">
+    tags:
     {% for tag in page.tags %}
       <a href="/tag/{{ tag | slugify }}/">{{ tag }}</a>{% unless forloop.last %} | {% endunless %}
     {% endfor %}
