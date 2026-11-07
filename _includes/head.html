@@ -1,0 +1,35 @@
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>
+    {%- if page.title -%}
+      {{ page.title }}
+    {%- else -%}
+      {{ site.title }}
+    {%- endif -%}
+  </title>
+
+  {%-seo title=false-%}
+  {%-feed_meta-%}
+
+  <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | relative_url }}" />
+  <link id="theme-css" rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
+  <script>
+    // Hidden theme switch: open any page with ?t=m to try Macchiato;
+    // the choice sticks in this browser until ?t=i (Ink).
+    (function () {
+      var themes = { ink: "main", macchiato: "macchiato" }, short = { i: "ink", m: "macchiato" }, theme;
+      try {
+        var asked = short[new URLSearchParams(location.search).get("t")];
+        if (asked) localStorage.setItem("theme", asked);
+        theme = localStorage.getItem("theme");
+      } catch (e) {}
+      if (theme in themes && theme !== "ink") {
+        document.getElementById("theme-css").href = "{{ "/assets/css/" | relative_url }}" + themes[theme] + ".css";
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.css" integrity="sha384-OH8qNTHoMMVNVcKdKewlipV4SErXqccxxlg6HC9Cwjr5oZu2AdBej1TndeCirael" crossorigin="anonymous">
+</head>

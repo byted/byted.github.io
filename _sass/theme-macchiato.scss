@@ -1,0 +1,22 @@
+// Macchiato (opt-in via ?t=m, see _includes/head.html) — Catppuccin Latte (light) / Macchiato (dark), monospace,
+// with shell-prompt flourishes (see _prompt.scss). Only links carry color.
+@mixin light-tokens {
+  --bg: #eff1f5; --text: #4c4f69; --heading: #4c4f69; --muted: #8c8fa1;
+  --link: #179299; --link-line: #17929955; --link-hover: #209fb5; --line: #ccd0da;
+  --code-bg: #e6e9ef; --code-text: #4c4f69;
+  --cursor: #179299;
+  --sel: #ccd0da; --target: #df8e1d33; --quote-line: #179299;
+  --hl-comment: #9ca0b0; --hl-kw: #8839ef; --hl-str: #40a02b; --hl-num: #fe640b; --hl-fn: #1e66f5; --hl-attr: #df8e1d;
+}
+@mixin dark-tokens {
+  --bg: #24273a; --text: #cad3f5; --heading: #cad3f5; --muted: #8087a2;
+  --link: #8bd5ca; --link-line: #8bd5ca55; --link-hover: #91d7e3; --line: #494d64;
+  --code-bg: #1e2030; --code-text: #cad3f5;
+  --cursor: #8bd5ca;
+  --sel: #494d64; --target: #eed49f33; --quote-line: #8bd5ca;
+  --hl-comment: #6e738d; --hl-kw: #c6a0f6; --hl-str: #a6da95; --hl-num: #f5a97f; --hl-fn: #8aadf4; --hl-attr: #eed49f;
+}
+:root { --font-body: #{"ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, Consolas, monospace"}; --fs: 15px; --lh: 1.6; --h1: 1.35em; --radius: 3px; }
+
+@import "base";
+@import "prompt";

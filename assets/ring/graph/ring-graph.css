@@ -11,12 +11,6 @@
 /* Maximize: real fullscreen, or a fixed overlay where element fullscreen is unavailable (iPhone Safari). */
 #ring-graph:fullscreen, #ring-graph.rg-maxed { height: 100vh; height: 100dvh; margin: 0; border: 0; border-radius: 0; }
 #ring-graph.rg-maxed { position: fixed; inset: 0; z-index: 1000; }
-/* The theme's dark mode inverts the whole body; invert the graph back so it keeps its Latte colours.
-   Fullscreen lifts the graph out of the body's invert, so there it needs none. */
-body[a="dark"] #ring-graph { filter: invert(1); }
-@media (prefers-color-scheme: dark) { body[a="auto"] #ring-graph { filter: invert(1); } }
-body[a="dark"] #ring-graph:fullscreen { filter: none; }
-@media (prefers-color-scheme: dark) { body[a="auto"] #ring-graph:fullscreen { filter: none; } }
 #ring-graph * { box-sizing: border-box; }
 #ring-graph a { color: #1e66f5; }
 .rg-toolbar { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; padding: 8px 16px; background: var(--mantle); border-bottom: 1px solid var(--line); }

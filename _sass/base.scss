@@ -1,0 +1,142 @@
+// Shared structure for all themes (_sass/theme-*.scss). Each theme defines
+// `light-tokens` / `dark-tokens` mixins plus any extras, then imports this.
+// Colors live in CSS custom properties so light/dark switch without the
+// old `filter: invert(1)` trick.
+
+$mono: ui-monospace, "SF Mono", "JetBrains Mono", "Cascadia Code", Menlo, Consolas, monospace;
+$serif: "Iowan Old Style", "Charter", "Palatino Linotype", Palatino, Georgia, serif;
+$sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+
+// ---------------- light / dark switching ---------------- //
+:root { color-scheme: light; @include light-tokens; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { color-scheme: dark; @include dark-tokens; }
+}
+:root[data-theme="dark"] { color-scheme: dark; @include dark-tokens; }
+
+// ---------------- base ---------------- //
+html, body { background: var(--bg); }
+html { height: 100%; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+// `html body` beats the inline `body { color: #404040 }` in post-with-tags
+html body {
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--fs, 16px);
+  line-height: var(--lh, 1.55);
+  margin: 0;
+  min-height: 100%;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+
+.w {
+  max-width: var(--measure, 640px);
+  margin: 0 auto;
+  padding: 4rem 1.25rem 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-head, inherit);
+  color: var(--heading, var(--text));
+  line-height: 1.25;
+}
+h1 { font-size: var(--h1, 1.6em); }
+h2, h3, h4, h5, h6 { margin-top: 2.75rem; }
+h2 { font-size: 1.3em; }
+h3 { font-size: 1.1em; }
+
+p { margin: 1rem 0; }
+li { margin: 0.35rem 0; }
+li::marker { color: var(--muted); }
+
+a {
+  color: var(--link);
+  text-decoration-line: underline;
+  text-decoration-color: var(--link-line, currentColor);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+a:hover { color: var(--link-hover, var(--link)); text-decoration-color: currentColor; }
+
+::selection { background: var(--sel); color: var(--sel-text, inherit); }
+*:target { background: var(--target); }
+
+strong, b { color: var(--strong, inherit); }
+
+// dates in lists and on posts
+.w ul li > span:first-child,
+.post-meta {
+  color: var(--muted);
+  font-family: var(--font-meta, $mono);
+  font-size: var(--meta-fs, 0.92em);
+  font-variant-numeric: tabular-nums;
+}
+.post-meta { text-align: right; }
+html .tags-meta { color: var(--muted) !important; font-family: var(--font-meta, $mono); }
+
+hr {
+  text-align: center;
+  border: 0;
+  margin: 2.5rem 0;
+  color: var(--muted);
+  font-family: $mono;
+  &:before { content: '/////'; }
+  &:after { content: attr(data-content) '/////'; }
+}
+
+table { width: 100%; }
+table, th, td {
+  border: thin solid var(--line);
+  border-collapse: collapse;
+  padding: 0.4rem;
+}
+
+code {
+  font-family: $mono;
+  font-size: 0.9em;
+  color: var(--code-text);
+  background: var(--code-bg);
+  padding: 0.1em 0.3em;
+  border-radius: var(--radius, 0);
+}
+div.highlighter-rouge {
+  pre { margin: 1.25rem 0; }
+  code {
+    display: block;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    padding: 1rem;
+    line-height: 1.5;
+  }
+}
+html .language-mermaid, html .language-mermaid code { background: none !important; color: var(--text); }
+
+// overrides the inline blockquote style in post-with-tags
+html blockquote {
+  font-style: italic;
+  margin: 1.5rem 0;
+  padding: 0.25rem 0 0.25rem 1.1rem;
+  border: none;
+  border-left: 2px solid var(--quote-line, var(--line));
+  color: var(--quote-text, var(--muted));
+  p { margin: 0.5rem 0; }
+}
+
+img { max-width: 100%; display: block; margin: 0 auto; }
+:root[data-theme="dark"] img { filter: brightness(0.9); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) img { filter: brightness(0.9); } }
+
+// syntax highlighting (rouge)
+.highlight {
+  .c, .c1, .cm, .cs, .cp { color: var(--hl-comment, var(--muted)); font-style: italic; }
+  .k, .kd, .kn, .kr, .kt, .kc, .ow { color: var(--hl-kw, inherit); }
+  .s, .s1, .s2, .sb, .sh, .se, .si, .sx { color: var(--hl-str, inherit); }
+  .m, .mi, .mf, .mh, .il { color: var(--hl-num, inherit); }
+  .nf, .nx, .fm, .nb { color: var(--hl-fn, inherit); }
+  .na, .nt, .py { color: var(--hl-attr, inherit); }
+}
+
+@media (max-width: 480px) {
+  .w { padding-top: 3.5rem; }
+}
